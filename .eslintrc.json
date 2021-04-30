@@ -1,0 +1,66 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "prettier"
+    ],
+    "rules": {
+     "react-hooks/rules-of-hooks": "error",
+     "react-hooks/exhaustive-deps": "warn",
+     "import/prefer-default-export": "off",
+     "camelcase": "off",
+     "import/extensions": 0,
+     "no-use-before-define": "off",
+     "prettier/prettier": "error",
+     "consistent-return": 0,
+     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+     "array-callback-return": "error",
+     "no-console": "error",
+     "complexity": ["error", 6],
+     "max-statements": ["error", 10],
+     "react/jsx-one-expression-per-line": 0,
+     "react/jsx-filename-extension": 0,
+     "max-statements-per-line": [
+       "error",
+       {
+         "max": 1
+       }
+     ],
+     "react/require-default-props": "warn",
+     "max-nested-callbacks": ["error", 2],
+     "max-lines": ["error", 150],
+     "prefer-const": "error",
+     "no-proto": 0,
+     "import/no-extraneous-dependencies": 0,
+     "linebreak-style": 0,
+     "react/jsx-props-no-spreading": 0,
+     "react/forbid-prop-types": 0,
+     "import/no-unresolved": 0,
+     "no-param-reassign": 0,
+     "comma-dangle": 0,
+     "jsx-a11y/click-events-have-key-events": 0,
+     "jsx-a11y/no-noninteractive-element-interactions": 0,
+     "template-curly-spacing" : "off",
+     "indent": ["error", 2, {
+       "ignoredNodes": ["TemplateLiteral"]
+     }]
+    }
+}
