@@ -3,17 +3,19 @@ import * as storage from '~/helpers/storage';
 const keyStorage = 'favorites';
 
 export default ({ data: { list }, changeState }) => ({
-  setFavorite: movie => {
-    const newMovies = [movie, ...list];
-    changeState({ label: 'list', value: newMovies });
+  setFavorite: album => {
+    const newAlbumns = [album, ...list];
+    changeState({ label: 'list', value: newAlbumns });
 
-    storage.setItem(keyStorage, newMovies);
+    storage.setItem(keyStorage, newAlbumns);
   },
-  removeFavorite: idMovie => {
-    const newMovies = list.filter(({ imdbID }) => imdbID !== idMovie);
-    changeState({ label: 'list', value: newMovies });
+  removeFavorite: idAlbum => {
+    const newAlbumns = list.filter(
+      ({ id: { attributes } }) => attributes['im:id'] !== idAlbum,
+    );
+    changeState({ label: 'list', value: newAlbumns });
 
-    storage.setItem(keyStorage, newMovies);
+    storage.setItem(keyStorage, newAlbumns);
   },
   loadFavorites: () => {
     const favorites = storage.getItem(keyStorage) || [];

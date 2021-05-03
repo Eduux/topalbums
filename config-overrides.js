@@ -21,6 +21,12 @@ module.exports = {
           statements: 90,
         },
       },
+      collectCoverageFrom: [
+        'src/pages/**/*.js',
+        'src/components/**/*.js',
+        'src/containers/**/*.js',
+        'src/services/**/*.js',
+      ],
     };
 
     return config;
