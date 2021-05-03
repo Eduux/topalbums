@@ -55,9 +55,9 @@ Pages are mapped in routes and have all the components needed to implement a fun
 
 Routes contains the `react-router-dom` implementation to map the project's routes to the respective pages
 
-### `./services`
+### `./service`
 
-Services are responsible to handle the connection with all external elements, like APIs
+Service are responsible to handle the connection with all external elements, like APIs
 
 ### `./helpers`
 
