@@ -1,7 +1,33 @@
-$primary: #25202c;
-$secondary: #8cb4eb;
+$primary: #272c32;
+$secondary: #fb6a33;
+
+$headerPrimary: #fb6a33;
+$headerSecondary: #fb491d;
+
+$bottomPrimary: #161a1d;
+$bottomSecondary: #121315;
+
 $error: #f5370b;
-$lightGray: rgba(255,255,255,0.6);
+$lightGray: #eeeeee;
 $white: #fff;
 
+$borderInput: #e3e3e3;
 
+$textColor: #686868;
+$fontSize: 14;
+
+$basePadding: 10;
+$baseMargin: 10;
+$baseRadius: 20;
+
+
+@mixin container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+@mixin simpleFlex {
+  display: flex;
+  align-items: center;
+}

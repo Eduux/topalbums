@@ -4,7 +4,7 @@ import { element } from 'prop-types';
 import './styles.scss';
 
 const ContentFullHeight = ({ children }) => (
-  <div className="container">{children}</div>
+  <div className="contentFullHeight">{children}</div>
 );
 
 ContentFullHeight.propTypes = {

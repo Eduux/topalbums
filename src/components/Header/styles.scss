@@ -1,0 +1,42 @@
+@import '~/styles/theme.scss';
+
+.headerContainer {
+  background: linear-gradient(180deg, $headerPrimary, $headerSecondary);
+  padding: #{$basePadding * 2}px;
+  margin-bottom: 50px;
+}
+
+.headerStyles {
+  @include simpleFlex;
+  @include container;
+}
+
+.headerContainerInput {
+  @include simpleFlex;
+  flex-direction: row;
+  flex: 1;
+  padding: 0px 25px;
+  border-radius: #{$baseRadius}px;
+  border: 1px solid $borderInput;
+  background: $white;
+  overflow: hidden;
+  color: $textColor;
+
+  div {
+    padding-right: 20px;
+
+    svg {
+      display: flex;
+    }
+  }
+
+  input {
+    flex: 1;
+    color: $textColor;
+    font-size: #{$fontSize}px;
+    border: none;
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    outline: none;
+  }
+}
