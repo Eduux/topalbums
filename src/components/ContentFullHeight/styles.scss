@@ -1,0 +1,9 @@
+$headerMinHeight: 161;
+$bottomMinHeight: 102;
+
+$negativeHeight: $bottomMinHeight + $headerMinHeight;
+
+.container {
+  min-height: calc(100vh - #{$negativeHeight}px);
+  overflow: hidden;
+}

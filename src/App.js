@@ -1,15 +1,16 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import Albumn from '~/components/Album';
+import '~/styles/global.scss';
 
-function App() {
-  return (
-    <div>
-      <div>
-        <Albumn />
-      </div>
-    </div>
-  );
-}
+import withContainers from 'containers';
 
-export default App;
+import Routes from 'routes';
+
+const App = () => (
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+);
+
+export default withContainers(App);
