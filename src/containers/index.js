@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 
-const listContainers = [];
+import favorites from './favorites';
+
+const listContainers = [favorites];
 
 export default function containers(WrappedComponent) {
   const WithContainers = props => {
