@@ -1,6 +1,6 @@
 import AxiosMockAdapter from 'axios-mock-adapter';
 
-import api from '~/services/api';
+import api from '~/service/api';
 
 const serviceMock = new AxiosMockAdapter(api);
 
