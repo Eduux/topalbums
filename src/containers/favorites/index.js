@@ -35,15 +35,13 @@ export default function withFavoritesProvider(
       [data],
     );
 
-    const dataValue = value();
-
     useEffect(() => {
-      dataValue.actions.loadFavorites();
+      value().actions.loadFavorites();
       // eslint-disable-next-line
     }, []);
 
     return (
-      <FavoritesContext.Provider value={dataValue}>
+      <FavoritesContext.Provider value={value()}>
         <WrappedComponent {...props} />
       </FavoritesContext.Provider>
     );

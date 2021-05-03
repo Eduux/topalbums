@@ -1,22 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentFullHeight component should render 1`] = `
+exports[`Bottom component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="contentFullHeight"
+        class="bottomStyles"
       >
-        ContentFullHeight
+        <div>
+          <h4>
+            2021 - Eduardo Santana
+          </h4>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="contentFullHeight"
+      class="bottomStyles"
     >
-      ContentFullHeight
+      <div>
+        <h4>
+          2021 - Eduardo Santana
+        </h4>
+      </div>
     </div>
   </div>,
   "debug": [Function],
