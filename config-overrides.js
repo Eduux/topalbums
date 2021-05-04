@@ -25,8 +25,9 @@ module.exports = {
         'src/pages/**/*.js',
         'src/components/**/*.js',
         'src/containers/**/*.js',
-        'src/services/**/*.js',
+        'src/service/**/*.js',
       ],
+      coveragePathIgnorePatterns: ['src/containers/index.js'],
     };
 
     return config;

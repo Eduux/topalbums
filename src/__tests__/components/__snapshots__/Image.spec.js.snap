@@ -1,26 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Banner component should render 1`] = `
+exports[`Image component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="bannerContainer"
+        class="positionAlbumContainer"
       >
-        <h2>
-          Top 100 Albums Itunes
-        </h2>
+        #1
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="bannerContainer"
+      class="positionAlbumContainer"
     >
-      <h2>
-        Top 100 Albums Itunes
-      </h2>
+      #1
     </div>
   </div>,
   "debug": [Function],

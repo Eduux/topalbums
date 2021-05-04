@@ -1,5 +1,7 @@
 import api from '~/service/api';
 
+import parseAlbums from './parseAlbums';
+
 export default ({ data, changeState }) => ({
   listAlbums: async () => {
     const { error } = data;
@@ -7,13 +9,18 @@ export default ({ data, changeState }) => ({
     changeState({ label: 'loading', value: true });
 
     try {
-      const { entry } = await api.get('');
+      const {
+        feed: { entry },
+      } = await api.get('');
 
-      changeState({ label: 'list', value: entry });
+      changeState({ label: 'list', value: entry.map(parseAlbums) });
 
       if (error) changeState({ label: 'error', value: null });
     } catch (err) {
-      changeState({ label: 'error', value: 'Ocorreu um erro inesperado!' });
+      changeState({
+        label: 'error',
+        value: 'An unexpected error has occurred!',
+      });
     } finally {
       changeState({ label: 'loading', value: false });
     }

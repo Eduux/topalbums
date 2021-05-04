@@ -1,0 +1,16 @@
+@import '~/styles/theme.scss';
+
+.positionAlbumContainer {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, $headerPrimary, $headerSecondary);
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

@@ -10,9 +10,7 @@ export default ({ data: { list }, changeState }) => ({
     storage.setItem(keyStorage, newAlbumns);
   },
   removeFavorite: idAlbum => {
-    const newAlbumns = list.filter(
-      ({ id: { attributes } }) => attributes['im:id'] !== idAlbum,
-    );
+    const newAlbumns = list.filter(album => album.id !== idAlbum);
     changeState({ label: 'list', value: newAlbumns });
 
     storage.setItem(keyStorage, newAlbumns);

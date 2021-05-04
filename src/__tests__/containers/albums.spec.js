@@ -5,6 +5,8 @@ import AxiosMockAdapter from 'axios-mock-adapter';
 
 import api from '~/service/api';
 
+import parseAlbums from '~/containers/albums/parseAlbums';
+
 import albumsRequest from '~/__mocks__/requests/albumsRequest';
 
 import withContainer, { initialState } from '~/containers/albums';
@@ -42,7 +44,7 @@ describe('albums container', () => {
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'list',
-          value: albumsRequest.entry,
+          value: albumsRequest.feed.entry.map(parseAlbums),
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'loading',
@@ -55,7 +57,9 @@ describe('albums container', () => {
       it('should be search albums with not found albumns', async () => {
         const changeStateMock = jest.fn();
 
-        serviceMock.onGet(`/`).reply(200, { ...albumsRequest, entry: [] });
+        serviceMock
+          .onGet(`/`)
+          .reply(200, { feed: { ...albumsRequest.feed, entry: [] } });
 
         const actionsMock = actions({
           data: { ...initialState },
@@ -98,7 +102,7 @@ describe('albums container', () => {
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'error',
-          value: 'Ocorreu um erro inesperado!',
+          value: 'An unexpected error has occurred!',
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'loading',
@@ -126,7 +130,7 @@ describe('albums container', () => {
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'list',
-          value: albumsRequest.entry,
+          value: albumsRequest.feed.entry.map(parseAlbums),
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'error',

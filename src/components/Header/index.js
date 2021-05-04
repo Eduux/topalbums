@@ -17,7 +17,7 @@ const Header = () => {
             value={searchInput}
             onChange={({ target: { value } }) => setSearchInput(value)}
             name="search"
-            placeholder="Search for best albums..."
+            placeholder="Search for best album..."
             autoComplete="off"
           />
         </div>

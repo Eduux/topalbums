@@ -1,6 +1,3 @@
-$primary: #272c32;
-$secondary: #fb6a33;
-
 $headerPrimary: #fb6a33;
 $headerSecondary: #fb491d;
 
@@ -8,17 +5,18 @@ $bottomPrimary: #161a1d;
 $bottomSecondary: #121315;
 
 $error: #f5370b;
-$lightGray: #eeeeee;
+$lightGray: #f7f7f7;
 $white: #fff;
 
 $borderInput: #e3e3e3;
 
-$textColor: #686868;
+$textColor: #1a1a1a;
+$subTextColor:#898989;
 $fontSize: 14;
 
 $basePadding: 10;
 $baseMargin: 10;
-$baseRadius: 20;
+$baseRadius: 15;
 
 
 @mixin container {

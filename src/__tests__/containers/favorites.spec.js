@@ -16,11 +16,7 @@ describe('favorites container', () => {
 
   describe('#actions', () => {
     const albumMock = {
-      id: {
-        attributes: {
-          'im:id': '1557087895',
-        },
-      },
+      id: '123',
     };
 
     describe('setFavorite', () => {
@@ -49,7 +45,7 @@ describe('favorites container', () => {
           changeState: changeStateMock,
         });
 
-        actionsMock.removeFavorite(albumMock.id.attributes['im:id']);
+        actionsMock.removeFavorite(albumMock.id);
 
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'list',

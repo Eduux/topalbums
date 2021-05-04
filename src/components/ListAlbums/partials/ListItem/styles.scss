@@ -1,0 +1,97 @@
+@import '~/styles/theme.scss';
+
+$marginX2: #{$baseMargin * 2}px;
+
+.listItemContainer {
+  @include simpleFlex;
+  cursor: pointer;
+  flex-direction: column;
+  margin-bottom: $marginX2;
+  padding: $marginX2;
+  border-radius: #{$baseRadius}px;
+  text-align: center;
+  transition: 0.3s linear;
+  position: relative;
+
+  background-color: $white;
+  box-shadow: 2px 2px 10px #00000029;
+  color: $textColor;
+  font-size: #{$fontSize}px;
+
+  img {
+    margin-right: #{$baseMargin}px;
+    border-radius: #{$baseRadius}px;
+    box-shadow: 2px 2px 16px #00000096;
+    position: relative;
+    transition: 0.2s linear;
+    top: 0;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+
+    img {
+      position: relative;
+      transform: scale(1.2);
+      top: -20px
+    }
+  }
+}
+
+.listItemAlbumName {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 202px;
+}
+
+.listItemAlbumTracks {
+  color: $subTextColor;
+  margin-top: 5px;
+}
+
+.listItemAlbumArtist {
+  @include simpleFlex;
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+
+  div:first-child {
+    svg {
+      animation: rotate 2s linear infinite;
+      margin-right: #{$baseMargin}px;
+    }
+  }
+
+  div:nth-child(2) {
+    flex: 1;
+    p:first-child {
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+    }
+
+    p:last-child {
+      color: $subTextColor;
+    }
+  }
+
+  div:last-child {
+    color: $headerSecondary;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
