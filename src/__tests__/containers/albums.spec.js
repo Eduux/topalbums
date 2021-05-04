@@ -14,6 +14,8 @@ import actions from '~/containers/albums/actions';
 
 const serviceMock = new AxiosMockAdapter(api);
 
+const albumsFiltered = albumsRequest.feed.entry.map(parseAlbums);
+
 describe('albums container', () => {
   it('should be render with Component.', () => {
     const MockComponent = () => <p>mock</p>;
@@ -26,7 +28,7 @@ describe('albums container', () => {
 
   describe('#actions', () => {
     describe('listAlbums', () => {
-      it('should be search albums with success', async () => {
+      it('should be list albums with success', async () => {
         const changeStateMock = jest.fn();
 
         serviceMock.onGet(`/`).reply(200, albumsRequest);
@@ -44,17 +46,21 @@ describe('albums container', () => {
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'list',
-          value: albumsRequest.feed.entry.map(parseAlbums),
+          value: albumsFiltered,
+        });
+        expect(changeStateMock).toHaveBeenCalledWith({
+          label: 'listFiltered',
+          value: albumsFiltered,
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'loading',
           value: false,
         });
 
-        expect(changeStateMock.mock.calls.length).toBe(3);
+        expect(changeStateMock.mock.calls.length).toBe(4);
       });
 
-      it('should be search albums with not found albumns', async () => {
+      it('should be list albums with not found albums', async () => {
         const changeStateMock = jest.fn();
 
         serviceMock
@@ -77,14 +83,18 @@ describe('albums container', () => {
           value: [],
         });
         expect(changeStateMock).toHaveBeenCalledWith({
+          label: 'listFiltered',
+          value: [],
+        });
+        expect(changeStateMock).toHaveBeenCalledWith({
           label: 'loading',
           value: false,
         });
 
-        expect(changeStateMock.mock.calls.length).toBe(3);
+        expect(changeStateMock.mock.calls.length).toBe(4);
       });
 
-      it('should be search albums with error', async () => {
+      it('should be list albums with error', async () => {
         const changeStateMock = jest.fn();
 
         serviceMock.onGet(`/`).reply(500);
@@ -112,7 +122,7 @@ describe('albums container', () => {
         expect(changeStateMock.mock.calls.length).toBe(3);
       });
 
-      it('must search for albums with error in the data, request successfully', async () => {
+      it('must list albums with error in the data, request successfully', async () => {
         const changeStateMock = jest.fn();
 
         serviceMock.onGet(`/`).reply(200, albumsRequest);
@@ -130,7 +140,11 @@ describe('albums container', () => {
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'list',
-          value: albumsRequest.feed.entry.map(parseAlbums),
+          value: albumsFiltered,
+        });
+        expect(changeStateMock).toHaveBeenCalledWith({
+          label: 'listFiltered',
+          value: albumsFiltered,
         });
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'error',
@@ -141,29 +155,25 @@ describe('albums container', () => {
           value: false,
         });
 
-        expect(changeStateMock.mock.calls.length).toBe(4);
+        expect(changeStateMock.mock.calls.length).toBe(5);
       });
     });
 
-    describe('setSearch', () => {
-      it('should be set search text', async () => {
+    describe('searchAlbums', () => {
+      it('must search albums by string', () => {
         const changeStateMock = jest.fn();
 
         const actionsMock = actions({
-          data: initialState,
+          data: { ...initialState, list: albumsFiltered },
           changeState: changeStateMock,
         });
 
-        const textSearch = 'Test';
-
-        await actionsMock.setSearch(textSearch);
+        actionsMock.searchAlbums('The Essential Johnny Cash');
 
         expect(changeStateMock).toHaveBeenCalledWith({
-          label: 'search',
-          value: textSearch,
+          label: 'listFiltered',
+          value: [albumsFiltered[0]],
         });
-
-        expect(changeStateMock.mock.calls.length).toBe(1);
       });
     });
   });

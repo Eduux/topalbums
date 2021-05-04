@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 
 import { useAlbums } from '~/containers/albums';
@@ -10,20 +11,24 @@ const SearchAlbums = () => {
     actions: { searchAlbums },
   } = useAlbums();
 
+  const history = useHistory();
+
   const [searchInput, setSearchInput] = useState('');
 
-  useEffect(() => {
+  const handleSubmit = e => {
+    e?.preventDefault();
+    history.push('');
+
     searchAlbums(searchInput);
-    // eslint-disable-next-line
-  }, [searchInput]);
+  };
 
   return (
     <div className="headerContainer">
       <div className="headerStyles">
-        <div className="headerContainerInput">
-          <div>
+        <form onSubmit={handleSubmit} className="headerContainerForm">
+          <button type="submit">
             <FaSearch size={16} />
-          </div>
+          </button>
           <input
             value={searchInput}
             onChange={({ target: { value } }) => setSearchInput(value)}
@@ -31,7 +36,7 @@ const SearchAlbums = () => {
             placeholder="Search for best album..."
             autoComplete="off"
           />
-        </div>
+        </form>
       </div>
     </div>
   );

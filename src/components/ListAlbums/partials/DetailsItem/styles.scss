@@ -1,0 +1,77 @@
+@import '~/styles/theme.scss';
+
+.detailsItemModal {
+  @include simpleFlex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #0000009e;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s opacity, 0.4s visibility;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.detailsItemActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+.detailsItemContainer {
+  max-width: 85%;
+  min-width: 80%;
+
+
+  @media (min-width: 768px) {
+    min-width: 50%;
+  }
+
+  flex-direction: row;
+  cursor: inherit;
+
+  > svg {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    cursor: pointer;
+    color: $headerPrimary;
+  }
+}
+
+.detailsItem {
+  flex: 1;
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  > div:last-child {
+    flex: 1;
+    text-align: left;
+    padding: 0px 20px;
+  }
+
+  .itemAlbumArtist {
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+      div:nth-child(2) p:first-child {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.detailsItemHref {
+  text-decoration: none;
+  color: white;
+  background-color: $headerPrimary;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: #{$baseMargin}px;
+}

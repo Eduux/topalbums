@@ -3,11 +3,12 @@ import { string, number, oneOfType } from 'prop-types';
 
 import noPoster from '~/assets/no-poster.png';
 
-const Image = ({ src, width, height, alt }) => {
+const Image = ({ src, width, height, alt, ...props }) => {
   const [error, setError] = useState(false);
 
   return (
     <img
+      {...props}
       loading="lazy"
       src={error ? noPoster : src}
       width={width}

@@ -10,7 +10,7 @@
   @include container;
 }
 
-.headerContainerInput {
+.headerContainerForm {
   @include simpleFlex;
   flex-direction: row;
   flex: 1;
@@ -21,8 +21,11 @@
   overflow: hidden;
   color: $subTextColor;
 
-  div {
+  button {
     padding-right: 20px;
+    border: none;
+    color: inherit;
+    background-color: inherit;
 
     svg {
       display: flex;

@@ -8,12 +8,11 @@ export const initialState = {
   error: null,
   list: [],
   listFiltered: [],
-  search: '',
 };
 
 export const AlbumsContext = React.createContext({
   data: initialState,
-  actions: actions({ data: initialState, changeState: changeState(() => {}) }),
+  actions: actions({ data: initialState, changeState }),
 });
 
 export const useAlbums = () => useContext(AlbumsContext);

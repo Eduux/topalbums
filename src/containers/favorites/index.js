@@ -15,7 +15,7 @@ export const initialState = {
 
 export const FavoritesContext = React.createContext({
   data: initialState,
-  actions: actions({ data: initialState, changeState: changeState(() => {}) }),
+  actions: actions({ data: initialState, changeState }),
 });
 
 export const useFavorites = () => useContext(FavoritesContext);

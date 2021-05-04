@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 
 import { useAlbums } from '~/containers/albums';
@@ -6,6 +5,7 @@ import { useAlbums } from '~/containers/albums';
 import Banner from '~/components/Banner';
 import Loader from '~/components/Loader';
 import ListAlbums from '~/components/ListAlbums';
+import ErrorMessage from '~/components/ErrorMessage';
 
 import './styles.scss';
 
@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return error ? (
-    <div>erro</div>
+    <ErrorMessage>{error}</ErrorMessage>
   ) : (
     <>
       {loading ? (

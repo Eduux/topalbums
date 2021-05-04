@@ -6,4 +6,6 @@ export default (album, index) => ({
   artist: album['im:artist'].label,
   category: album.category.attributes.term,
   position: index + 1,
+  price: album['im:price'].label,
+  linkMusic: album.link.attributes.href,
 });

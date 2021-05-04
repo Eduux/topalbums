@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import withContainers from 'containers';
 
+import '~/styles/theme.scss';
 import '~/styles/global.scss';
 
 import Routes from 'routes';

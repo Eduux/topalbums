@@ -30,7 +30,7 @@ describe('Home page', () => {
   it('must render with data', () => {
     const Container = withAlbums(Home, {
       ...initialState,
-      list: [albumRequest.feed.entry.map(parseAlbums)],
+      listFiltered: albumRequest.feed.entry.map(parseAlbums),
     });
 
     const result = render(<Container />);

@@ -1,5 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {
+  render,
+  act,
+  fireEvent,
+  getByRole,
+  getByTestId,
+} from '@testing-library/react';
 
 import parseAlbums from '~/containers/albums/parseAlbums';
 
@@ -22,6 +28,33 @@ describe('ListAlbums component', () => {
 
   it('should render without data and changing the empty list message', async () => {
     const result = render(<Component list={[]} emptyMessage="Teste" />);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should render with data and open a album details and close it', async () => {
+    const result = render(<Component list={list} />);
+    const { container } = result;
+
+    act(() => {
+      fireEvent(
+        getByRole(container, 'tabpanel'),
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+    });
+
+    act(() => {
+      fireEvent(
+        getByTestId(container, 'close-icon'),
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+    });
+
     expect(result).toMatchSnapshot();
   });
 });

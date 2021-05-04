@@ -1,23 +1,13 @@
 import React from 'react';
 
-import { useAlbums } from '~/containers/albums';
-
-import Menu from '~/components/Menu';
-import SearchAlbums from '~/components/SearchAlbums';
+import Menu from './partials/Menu';
+import SearchAlbums from './partials/SearchAlbums';
 
 const Header = () => {
-  const {
-    data: { list },
-  } = useAlbums();
-
   return (
     <>
-      {!!list.length && (
-        <>
-          <SearchAlbums />
-          <Menu />
-        </>
-      )}
+      <SearchAlbums />
+      <Menu />
     </>
   );
 };

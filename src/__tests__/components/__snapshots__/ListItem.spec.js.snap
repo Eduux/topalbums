@@ -6,33 +6,38 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="listItemContainer"
+        class="itemContainer itemAlbumHover"
       >
         <div
-          class="positionAlbumContainer"
+          role="tabpanel"
         >
-          #2
+          <div
+            class="positionAlbumContainer"
+          >
+            #1
+          </div>
+          <img
+            alt="Album image 1"
+            class="imageStyles"
+            height="auto"
+            loading="lazy"
+            src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+            width="120"
+          />
+          <p
+            class="itemAlbumName itemAlbumNameOverflow"
+            title="The Essential Johnny Cash"
+          >
+            The Essential Johnny Cash
+          </p>
+          <p
+            class="itemAlbumTracks"
+          >
+            36 tracks
+          </p>
         </div>
-        <img
-          alt="Album image 1"
-          height="auto"
-          loading="lazy"
-          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-          width="120"
-        />
-        <p
-          class="listItemAlbumName"
-          title="The Essential Johnny Cash"
-        >
-          The Essential Johnny Cash
-        </p>
-        <p
-          class="listItemAlbumTracks"
-        >
-          36 tracks
-        </p>
         <div
-          class="listItemAlbumArtist"
+          class="itemAlbumArtist"
         >
           <div>
             <svg
@@ -93,33 +98,38 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="listItemContainer"
+      class="itemContainer itemAlbumHover"
     >
       <div
-        class="positionAlbumContainer"
+        role="tabpanel"
       >
-        #2
+        <div
+          class="positionAlbumContainer"
+        >
+          #1
+        </div>
+        <img
+          alt="Album image 1"
+          class="imageStyles"
+          height="auto"
+          loading="lazy"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+          width="120"
+        />
+        <p
+          class="itemAlbumName itemAlbumNameOverflow"
+          title="The Essential Johnny Cash"
+        >
+          The Essential Johnny Cash
+        </p>
+        <p
+          class="itemAlbumTracks"
+        >
+          36 tracks
+        </p>
       </div>
-      <img
-        alt="Album image 1"
-        height="auto"
-        loading="lazy"
-        src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-        width="120"
-      />
-      <p
-        class="listItemAlbumName"
-        title="The Essential Johnny Cash"
-      >
-        The Essential Johnny Cash
-      </p>
-      <p
-        class="listItemAlbumTracks"
-      >
-        36 tracks
-      </p>
       <div
-        class="listItemAlbumArtist"
+        class="itemAlbumArtist"
       >
         <div>
           <svg
@@ -237,33 +247,38 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="listItemContainer"
+        class="itemContainer itemAlbumHover"
       >
         <div
-          class="positionAlbumContainer"
+          role="tabpanel"
         >
-          #2
+          <div
+            class="positionAlbumContainer"
+          >
+            #1
+          </div>
+          <img
+            alt="Album image 1"
+            class="imageStyles"
+            height="auto"
+            loading="lazy"
+            src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+            width="120"
+          />
+          <p
+            class="itemAlbumName itemAlbumNameOverflow"
+            title="The Essential Johnny Cash"
+          >
+            The Essential Johnny Cash
+          </p>
+          <p
+            class="itemAlbumTracks"
+          >
+            36 tracks
+          </p>
         </div>
-        <img
-          alt="Album image 1"
-          height="auto"
-          loading="lazy"
-          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-          width="120"
-        />
-        <p
-          class="listItemAlbumName"
-          title="The Essential Johnny Cash"
-        >
-          The Essential Johnny Cash
-        </p>
-        <p
-          class="listItemAlbumTracks"
-        >
-          36 tracks
-        </p>
         <div
-          class="listItemAlbumArtist"
+          class="itemAlbumArtist"
         >
           <div>
             <svg
@@ -324,33 +339,38 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="listItemContainer"
+      class="itemContainer itemAlbumHover"
     >
       <div
-        class="positionAlbumContainer"
+        role="tabpanel"
       >
-        #2
+        <div
+          class="positionAlbumContainer"
+        >
+          #1
+        </div>
+        <img
+          alt="Album image 1"
+          class="imageStyles"
+          height="auto"
+          loading="lazy"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+          width="120"
+        />
+        <p
+          class="itemAlbumName itemAlbumNameOverflow"
+          title="The Essential Johnny Cash"
+        >
+          The Essential Johnny Cash
+        </p>
+        <p
+          class="itemAlbumTracks"
+        >
+          36 tracks
+        </p>
       </div>
-      <img
-        alt="Album image 1"
-        height="auto"
-        loading="lazy"
-        src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-        width="120"
-      />
-      <p
-        class="listItemAlbumName"
-        title="The Essential Johnny Cash"
-      >
-        The Essential Johnny Cash
-      </p>
-      <p
-        class="listItemAlbumTracks"
-      >
-        36 tracks
-      </p>
       <div
-        class="listItemAlbumArtist"
+        class="itemAlbumArtist"
       >
         <div>
           <svg
@@ -468,33 +488,38 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="listItemContainer"
+        class="itemContainer itemAlbumHover"
       >
         <div
-          class="positionAlbumContainer"
+          role="tabpanel"
         >
-          #2
+          <div
+            class="positionAlbumContainer"
+          >
+            #1
+          </div>
+          <img
+            alt="Album image 1"
+            class="imageStyles"
+            height="auto"
+            loading="lazy"
+            src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+            width="120"
+          />
+          <p
+            class="itemAlbumName itemAlbumNameOverflow"
+            title="The Essential Johnny Cash"
+          >
+            The Essential Johnny Cash
+          </p>
+          <p
+            class="itemAlbumTracks"
+          >
+            36 tracks
+          </p>
         </div>
-        <img
-          alt="Album image 1"
-          height="auto"
-          loading="lazy"
-          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-          width="120"
-        />
-        <p
-          class="listItemAlbumName"
-          title="The Essential Johnny Cash"
-        >
-          The Essential Johnny Cash
-        </p>
-        <p
-          class="listItemAlbumTracks"
-        >
-          36 tracks
-        </p>
         <div
-          class="listItemAlbumArtist"
+          class="itemAlbumArtist"
         >
           <div>
             <svg
@@ -555,33 +580,38 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="listItemContainer"
+      class="itemContainer itemAlbumHover"
     >
       <div
-        class="positionAlbumContainer"
+        role="tabpanel"
       >
-        #2
+        <div
+          class="positionAlbumContainer"
+        >
+          #1
+        </div>
+        <img
+          alt="Album image 1"
+          class="imageStyles"
+          height="auto"
+          loading="lazy"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
+          width="120"
+        />
+        <p
+          class="itemAlbumName itemAlbumNameOverflow"
+          title="The Essential Johnny Cash"
+        >
+          The Essential Johnny Cash
+        </p>
+        <p
+          class="itemAlbumTracks"
+        >
+          36 tracks
+        </p>
       </div>
-      <img
-        alt="Album image 1"
-        height="auto"
-        loading="lazy"
-        src="https://is2-ssl.mzstatic.com/image/thumb/Music3/v4/2a/e0/cf/2ae0cf36-6b4b-261a-7153-55a93d59df5b/dj.yjweejkt.jpg/170x170bb.png"
-        width="120"
-      />
-      <p
-        class="listItemAlbumName"
-        title="The Essential Johnny Cash"
-      >
-        The Essential Johnny Cash
-      </p>
-      <p
-        class="listItemAlbumTracks"
-      >
-        36 tracks
-      </p>
       <div
-        class="listItemAlbumArtist"
+        class="itemAlbumArtist"
       >
         <div>
           <svg

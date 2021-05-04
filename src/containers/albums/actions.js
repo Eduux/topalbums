@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import api from '~/service/api';
 
 import parseAlbums from './parseAlbums';
