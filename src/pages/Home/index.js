@@ -4,34 +4,35 @@ import React, { useEffect } from 'react';
 import { useAlbums } from '~/containers/albums';
 
 import Banner from '~/components/Banner';
+import Loader from '~/components/Loader';
 import ListAlbums from '~/components/ListAlbums';
 
 import './styles.scss';
 
 const Home = () => {
   const {
-    data: { list, loading, error },
+    data: { listFiltered, loading, error },
     actions: { listAlbums },
   } = useAlbums();
 
   useEffect(() => {
-    if (!list.length) listAlbums();
+    if (!listFiltered.length) listAlbums();
     // eslint-disable-next-line
   }, []);
 
   return error ? (
     <div>erro</div>
   ) : (
-    <div>
+    <>
       {loading ? (
-        <div>carregando</div>
+        <Loader />
       ) : (
         <div className="homeContainer">
-          <Banner />
-          <ListAlbums list={list} />
+          <Banner title="TopTop 100 Albums Itunes" />
+          <ListAlbums list={listFiltered} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

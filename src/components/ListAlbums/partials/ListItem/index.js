@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, number } from 'prop-types';
+import { object } from 'prop-types';
 import { BiAlbum } from 'react-icons/bi';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
@@ -10,7 +10,7 @@ import PositionAlbum from '~/components/PositionAlbum';
 
 import './styles.scss';
 
-const ListItem = ({ album, index }) => {
+const ListItem = ({ album }) => {
   const {
     data: { list },
     actions: { setFavorite, removeFavorite },
@@ -20,8 +20,12 @@ const ListItem = ({ album, index }) => {
 
   return (
     <div className="listItemContainer">
-      <PositionAlbum position={index + 1} />
-      <Image src={album.image} width={120} alt={`Album image ${index}`} />
+      <PositionAlbum position={album.position} />
+      <Image
+        src={album.image}
+        width={120}
+        alt={`Album image ${album.position}`}
+      />
 
       <p className="listItemAlbumName" title={album.name}>
         {album.name}
@@ -58,7 +62,6 @@ const ListItem = ({ album, index }) => {
 
 ListItem.propTypes = {
   album: object.isRequired,
-  index: number.isRequired,
 };
 
 export default ListItem;

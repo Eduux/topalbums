@@ -1,0 +1,43 @@
+@import '~/styles/theme.scss';
+
+.menuContainer {
+  background-color: $gray;
+  margin-bottom: 35px;
+
+  div {
+    @include container;
+
+    ul {
+      @include simpleFlex;
+
+      li {
+        flex: 1;
+
+        a {
+          @include simpleFlex;
+          justify-content: center;
+          text-align: center;
+          cursor: pointer;
+          padding: #{$basePadding * 1.5}px;
+          color: $textColor;
+          font-size: #{$fontSize}px;
+          transition: 0.3s ease all;
+
+          svg {
+            margin-right: #{$baseMargin}px;
+          }
+
+          &:hover {
+            color: $headerPrimary;
+          }
+
+          &.active {
+            color: $headerPrimary;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+

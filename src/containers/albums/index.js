@@ -7,6 +7,7 @@ export const initialState = {
   loading: false,
   error: null,
   list: [],
+  listFiltered: [],
   search: '',
 };
 

@@ -2,8 +2,7 @@
 
 .headerContainer {
   background: linear-gradient(180deg, $headerPrimary, $headerSecondary);
-  padding: #{$basePadding * 2}px;
-  margin-bottom: 50px;
+  padding: #{$basePadding * 2}px 0px;
 }
 
 .headerStyles {

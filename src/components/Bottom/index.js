@@ -5,7 +5,7 @@ import './styles.scss';
 const Header = () => (
   <div className="bottomStyles">
     <div>
-      <h4>2021 - Eduardo Santana</h4>
+      <h4>2021 - Eduardo Quadros</h4>
     </div>
   </div>
 );

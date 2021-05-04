@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import api from '~/service/api';
 
 import parseAlbums from './parseAlbums';
@@ -13,7 +14,10 @@ export default ({ data, changeState }) => ({
         feed: { entry },
       } = await api.get('');
 
-      changeState({ label: 'list', value: entry.map(parseAlbums) });
+      const parsedList = entry.map(parseAlbums);
+
+      changeState({ label: 'list', value: parsedList });
+      changeState({ label: 'listFiltered', value: parsedList });
 
       if (error) changeState({ label: 'error', value: null });
     } catch (err) {
@@ -26,7 +30,12 @@ export default ({ data, changeState }) => ({
     }
   },
 
-  setSearch: search => {
-    changeState({ label: 'search', value: search });
+  searchAlbums: search => {
+    changeState({
+      label: 'listFiltered',
+      value: data.list.filter(({ name }) =>
+        name.toUpperCase().includes(search.toUpperCase()),
+      ),
+    });
   },
 });

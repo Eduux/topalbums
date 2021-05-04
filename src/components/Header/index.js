@@ -1,28 +1,24 @@
-import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import React from 'react';
 
-import './styles.scss';
+import { useAlbums } from '~/containers/albums';
+
+import Menu from '~/components/Menu';
+import SearchAlbums from '~/components/SearchAlbums';
 
 const Header = () => {
-  const [searchInput, setSearchInput] = useState('');
+  const {
+    data: { list },
+  } = useAlbums();
 
   return (
-    <div className="headerContainer">
-      <div className="headerStyles">
-        <div className="headerContainerInput">
-          <div>
-            <FaSearch size={16} />
-          </div>
-          <input
-            value={searchInput}
-            onChange={({ target: { value } }) => setSearchInput(value)}
-            name="search"
-            placeholder="Search for best album..."
-            autoComplete="off"
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      {!!list.length && (
+        <>
+          <SearchAlbums />
+          <Menu />
+        </>
+      )}
+    </>
   );
 };
 

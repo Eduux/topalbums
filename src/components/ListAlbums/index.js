@@ -1,6 +1,8 @@
 import React from 'react';
 import { array, string } from 'prop-types';
 
+import ErrorMessage from '~/components/ErrorMessage';
+
 import ListItem from './partials/ListItem';
 
 import './styles.scss';
@@ -8,12 +10,12 @@ import './styles.scss';
 const ListAlbums = ({ list, emptyMessage }) => {
   return list.length ? (
     <div className="listAlbumsContainer">
-      {list.map((album, index) => (
-        <ListItem key={album.id} album={album} index={index} />
+      {list.map(album => (
+        <ListItem key={album.id} album={album} />
       ))}
     </div>
   ) : (
-    <div className="listAlbumsEmptyMessage">{emptyMessage}</div>
+    <ErrorMessage>{emptyMessage}</ErrorMessage>
   );
 };
 

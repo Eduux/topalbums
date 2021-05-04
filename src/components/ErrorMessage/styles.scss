@@ -1,0 +1,13 @@
+@import '~/styles/theme.scss';
+
+.errorContainer {
+  @include simpleFlex;
+  flex-direction: column;
+  color: $error;
+  text-align: center;
+  margin-top: 50px;
+
+  svg {
+    margin-bottom: 10px;
+  }
+}
