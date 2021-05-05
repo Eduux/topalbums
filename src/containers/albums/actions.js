@@ -29,11 +29,11 @@ export default ({ data, changeState }) => ({
     }
   },
 
-  searchAlbums: search => {
+  searchAlbums: (search, type) => {
     changeState({
       label: 'listFiltered',
-      value: data.list.filter(({ name }) =>
-        name.toUpperCase().includes(search.toUpperCase()),
+      value: data.list.filter(album =>
+        album[type].toUpperCase().includes(search.toUpperCase()),
       ),
     });
   },

@@ -8,6 +8,7 @@
 .headerStyles {
   @include simpleFlex;
   @include container;
+  flex-direction: column;
 }
 
 .headerContainerForm {
@@ -20,6 +21,7 @@
   background: $white;
   overflow: hidden;
   color: $subTextColor;
+  width: 100%;
 
   button {
     padding-right: 20px;
@@ -40,5 +42,30 @@
     height: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     outline: none;
+  }
+}
+
+.headerAdvancedSearch {
+  width: 100%;
+  @include simpleFlex;
+  margin-top: #{$baseMargin}px;
+
+  > div {
+    @include simpleFlex;
+    margin-left: 5px;
+
+    > button {
+      margin: 0px 5px;
+      background-color: $white;
+      color: $bottomSecondary;
+      border-radius: 15px;
+      padding: 5px 15px;
+      border: none;
+
+      &.active {
+        background-color: $bottomSecondary;
+        color: $white;
+      }
+    }
   }
 }

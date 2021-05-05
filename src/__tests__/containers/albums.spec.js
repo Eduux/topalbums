@@ -168,7 +168,7 @@ describe('albums container', () => {
           changeState: changeStateMock,
         });
 
-        actionsMock.searchAlbums('The Essential Johnny Cash');
+        actionsMock.searchAlbums('The Essential Johnny Cash', 'name');
 
         expect(changeStateMock).toHaveBeenCalledWith({
           label: 'listFiltered',

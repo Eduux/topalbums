@@ -38,6 +38,24 @@ Object {
               value=""
             />
           </form>
+          <div
+            class="headerAdvancedSearch"
+          >
+            Filter by:
+            <div>
+              <button
+                class="active"
+                type="button"
+              >
+                Album
+              </button>
+              <button
+                type="button"
+              >
+                Artist
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -128,6 +146,24 @@ Object {
             value=""
           />
         </form>
+        <div
+          class="headerAdvancedSearch"
+        >
+          Filter by:
+          <div>
+            <button
+              class="active"
+              type="button"
+            >
+              Album
+            </button>
+            <button
+              type="button"
+            >
+              Artist
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div

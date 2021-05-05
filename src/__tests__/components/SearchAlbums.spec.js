@@ -3,6 +3,7 @@ import {
   render,
   fireEvent,
   getByPlaceholderText,
+  getByText,
   act,
 } from '@testing-library/react';
 import AxiosMockAdapter from 'axios-mock-adapter';
@@ -30,12 +31,34 @@ describe('SearchInput component', () => {
     const { container } = result;
 
     const input = getByPlaceholderText(container, 'Search for best album...');
+
     act(() => {
       fireEvent.change(input, { target: { value: 'Fortitude' } });
       fireEvent.submit(input);
     });
 
     expect(input.value).toBe('Fortitude');
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should render with data and change option type', () => {
+    const Container = withAlbums(Component);
+
+    const result = render(<Container />);
+    const { container } = result;
+
+    const input = getByPlaceholderText(container, 'Search for best album...');
+    const optionAlbum = getByText(container, 'Album');
+    const optionArtirst = getByText(container, 'Artist');
+
+    act(() => {
+      fireEvent.change(input, { target: { value: 'Gojira' } });
+      fireEvent.click(optionAlbum);
+      fireEvent.click(optionArtirst);
+      fireEvent.submit(input);
+    });
+
+    expect(input.value).toBe('Gojira');
     expect(result).toMatchSnapshot();
   });
 });
